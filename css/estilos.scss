@@ -1,0 +1,171 @@
+/* Importación de archivo colors.scss */
+@import "colors";
+
+/* Declaración de variable para tipo de letra */
+$font-family_1: Arial;
+
+/* Estilos universales de la página */
+* {
+	box-sizing: border-box;
+}
+
+/* Estilos del cuerpo de la página */
+body {
+	font-family: $font-family_1;
+	margin: 0;
+}
+
+/* Encabezado del sitio web */
+.header {
+	padding: 30px;
+	text-align: center;
+	color: $color_1;
+	background-color: $background-color_9;	
+	width: 100%;	
+}
+
+/* Logo del sitio web */
+.logo {
+	width: 10%;
+}
+
+/* Contenedor de columnas */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Estilos para contenido lateral izquierdo*/
+.side {
+	flex: 30%;
+	background-color: $background-color_3;
+	padding: 5px;
+}
+
+/* Columna principal */
+.main {
+	flex: 70%;
+	background-color: $background-color_4;
+	padding: 20px;
+}
+
+/* Fondo para contenido de menú lateral */
+.fondo {
+	background-color: $background-color_10;
+	width: 100%;
+	padding: 5px;
+	height: 60px;
+
+	a {
+		color: $color_3;				
+		text-decoration: none;		
+		text-align: center;
+
+    /* Cambio de color en enlaces durante evento hover */
+		&:hover {
+			text-decoration: underline;			
+			color: $color_3;
+		}
+	}
+}
+
+/* Alineación de texto central para títulos */
+h2, h3 {
+	text-align: center;
+}
+
+/* Estilos para imágenes de encabezado, acerca de nosotros. */
+img {
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;	
+}
+
+/* Estilos para imágenes para sección lateral. */
+#imagenPortadaLateral {
+	clip-path: circle(25%);	
+}
+
+/* Estilos para imágenes para imagen de págnia de portada.. */
+#imagenPortada {
+	clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+/* Imágenes de la página de cursos */
+.courseImage {
+	width: 40%;
+	height: auto;
+}
+
+/* Enlaces a cada página de detalle de cada curso. */
+.enlaceCurso {
+	color: $color_2;
+}
+
+/* Imágenes de las páginas detallando cada curso. */
+.imagenDetalle {	
+	height: 345px;
+} 
+
+/* Imágenes de la página de fuentes */
+.sourceImage {
+	width: 30%;
+	height: auto;		
+}
+
+/* Estilos texto indicativo en imágenes de enlaces de fuentes y sitios aliados. */
+figcaption {
+	font-style: italic;
+	font-size: smaller;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Recurso gráfico elabroado a partir de SVG */
+svg {
+	height:10;
+	width:100%;	
+	stroke-width:10;
+	animation-name: animacionSVG;
+  	animation-duration: 4s;
+  	animation-iteration-count: infinite;
+
+	@keyframes animacionSVG {
+	0%   {background-color:$background-color_11;}
+	25%  {background-color:$background-color_12;}
+	50%  {background-color:$background-color_13;}
+	75%  {background-color:$background-color_14;}
+	100% {background-color:$background-color_15;}
+	}
+}
+
+/* Pie de página */
+.footer {
+	padding: 20px;
+	text-align: center;
+	color: $color_3;
+	background-color: $background-color_9;
+	
+	/* Enlaces del pie de página */
+	a {
+		color: $color_3;
+		padding: 14px 20px;
+		text-decoration: none;
+		text-align: center;
+
+		/* Cambio de color en enlaces durante evento hover */
+		&:hover {
+			text-decoration: underline;			
+			color: $color_3;
+		}
+	}
+}
+
+/* Diseño responsivo: cuando la pantalla tiene menos de 700 píxeles de ancho, las dos columnas se apilan una encima de la otra en lugar de una al lado de la otra. */
+@media screen and (max-width: 700px) {
+	.row {
+		flex-direction: column;
+	}	
+}
